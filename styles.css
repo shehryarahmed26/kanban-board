@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f4f4f9;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    background-color: var(--column-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.column h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+
+.task {
+    background-color: #e0e4e8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-content {
+    flex-grow: 1;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.edit-btn {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #ff4c4c;
+    color: #fff;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+body.light-mode .theme-toggle {
+    color: #ffa500;
+}
+
+body.dark-mode .theme-toggle {
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
